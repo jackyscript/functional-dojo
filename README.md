@@ -7,7 +7,7 @@ functional-dojo is a place for experimenting using functional programming. It cu
 * Javascript 😎
 * Java 🤓
 
-The intent is to share tips, hints and tidbits about functional programming in a simple executable manner and I want to give back to fellow programmers. 😊
+The intent is to share tips, hints and tidbits about functional programming in a simple executable manner. It is my hope and wish to give back to fellow programmers. 😊
 
 ## Prerequisites:
 
