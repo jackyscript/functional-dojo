@@ -1,11 +1,13 @@
 /*
-  @Credits to Martin Novak @MeetMartin.
+  All @Credits to Martin Novak @ https://github.com/MeetMartin.
+  This whole project started with the very recommandable short of 7urtle Javascript:
+  https://www.youtube.com/watch?v=LITiJmyiOt0
   JavaScript functional programming.
   Monad under 60 seconds
 */
 
 /*
-  This is the simplest implementation of a functor
+  This is a minimal implementation of a functor
   It simply has a "of"-function that accepts a value
   and returns an object that has "map".
 */
@@ -48,7 +50,7 @@ Functor
 /*
   If a functor maps a function that returns a monad
   you would have a monad inside of a monad.
-*/ 
+*/
 Monad
   .of('Turtle')
   .map(a => Monad.of(a + 's'));
