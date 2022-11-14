@@ -1,14 +1,13 @@
-# functional-dojo
-[![][license-apache img]][license-apache]
-Playing with functional programming
+# functional-dojo 🥋
+Functional programming training ground
 
 ## What is it?
-functional-dojo is a playground for functional programming experiments. It currently contains example programs written in:
+functional-dojo is a place for experimenting using functional programming. It currently contains example programs written in:
 
-* Javascript
-* Java
+* Javascript 😎
+* Java 🤓
 
-The purpose is to share tips, hints and tidbits about functional programming in a simple executable manner, as I want to give back to fellow programmers.
+The intent is to share tips, hints and tidbits about functional programming in a simple executable manner and I want to give back to fellow programmers. 😊
 
 ## Prerequisites:
 
