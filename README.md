@@ -6,20 +6,36 @@ functional-dojo is a place for experimenting using functional programming. It cu
 
 * Javascript 😎
 * Java 🤓
+* Scala 🧐
 
 The intent is to share tips, hints and tidbits about functional programming in a simple executable manner.
 
 ## Prerequisites:
 
 * No further pre steps necessary for js
-* maven for Java
+
+git clone https://github.com/jackyscript/functional-dojo.git
+
+### Java
+
+maven for Java
 
 ```
-git clone https://github.com/jackyscript/functional-dojo.git
 cd java/demo
 ```
 
 #### Maven
 ```
 mvn clean install
+```
+
+### Scala
+
+```
+cd scala/scala3
+```
+
+#### sbt
+```
+sbt compile
 ```
