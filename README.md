@@ -12,9 +12,11 @@ The intent is to share tips, hints and tidbits about functional programming in a
 
 ## Prerequisites:
 
-* No further pre steps necessary for js
-
 git clone https://github.com/jackyscript/functional-dojo.git
+
+### JS
+No further pre steps necessary for js...
+
 
 ### Java
 
