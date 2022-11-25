@@ -15,12 +15,10 @@ The intent is to share tips, hints and tidbits about functional programming in a
 git clone https://github.com/jackyscript/functional-dojo.git
 
 ### JS
-No further pre steps necessary for js...
+No further pre steps necessary...
 
 
 ### Java
-
-maven for Java
 
 ```
 cd java/demo
