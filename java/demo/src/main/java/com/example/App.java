@@ -39,5 +39,10 @@ public final class App {
          */
         Monad.of(Monad.of("Turtle")).map(a -> Monad.of(a + "s"));
         // => Monad(Monad('Turtles'))
+
+        
+        // Let's apply our monad...
+        Monad.of(5).flatMap(a -> Monad.of(a + 1)).inspect();
+
     }
 }
