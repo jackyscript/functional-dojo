@@ -39,10 +39,10 @@ public class Functor<T> {
     /**
      * Applies a function to the value of the functor.
      *
-     * @param fn Function which returns the same type as the given type
+     * @param fn Function which returns the U type given the type T
      * @return Return a functor with the applied value
      */
-    public Functor<T> map(Function<T, T> fn) {
+    public <U> Functor<U> map(Function<T, U> fn) {
 
         return Functor.of(fn.apply(value));
 

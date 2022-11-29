@@ -38,11 +38,11 @@ public class Monad<T> extends Functor<T> {
     /**
      * Applies a function to the value of the monad.
      *
-     * @param fn Function which returns the same type as the given type
+     * @param fn Function which returns the U type as the given type T
      * @return Return a monad with the applied value
      */
     @Override
-    public Monad<T> map(Function<T, T> fn) {
+    public <U> Monad<U> map(Function<T, U> fn) {
 
         return Monad.of(fn.apply(value));
 
@@ -51,10 +51,10 @@ public class Monad<T> extends Functor<T> {
     /**
      * Applies a function to the value of the monad.
      *
-     * @param fn Function which returns the same type as the given type
+     * @param fn Function which returns the U type given the type T
      * @return Return the applied value
      */
-    public T flatMap(Function<T, T> fn) {
+    public <U> U flatMap(Function<T, U> fn) {
 
         return fn.apply(value);
 
