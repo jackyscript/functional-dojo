@@ -37,10 +37,16 @@ public final class App {
          * If a functor maps a function that returns a monad
          * you would have a monad inside of a monad.
          */
-        Monad.of(Monad.of("Turtle")).map(a -> Monad.of(a + "s"));
+        Monad.of("Turtle").map(a -> Monad.of(a + "s"));
         // => Monad(Monad('Turtles'))
 
-        
+        /*
+        Instead a monad needs to implement "flatMap".
+        "flatMap" flattens the result so instead of a monad inside of a monad you just have one monad.
+        */
+        Monad.of("Turtle").flatMap(a -> Monad.of(a + 's')).inspect();
+        // => Monad('Turtles')
+
         // Let's apply our monad...
         Monad.of(5).flatMap(a -> Monad.of(a + 1)).inspect();
 

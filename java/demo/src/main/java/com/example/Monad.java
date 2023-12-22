@@ -2,10 +2,13 @@ package com.example;
 
 import java.util.function.Function;
 
+import com.example.spec.Inspectable;
+import com.example.spec.IsMonad;
+
 /**
  * To turn our functor into a monad we just add the flatMap function.
  */
-public class Monad<T> extends Functor<T> {
+public class Monad<T> implements IsMonad<T>, Inspectable {
 
     private T value;
 
@@ -13,12 +16,12 @@ public class Monad<T> extends Functor<T> {
      * Compute a monad with the given value
      *
      * @param <T> Type of the monad
-     * @param value functor value
+     * @param value monad value
      * @return Monad with the given value
      */
     public static <T> Monad<T> of(T value) {
 
-        Monad<T> monad = new Monad<>();
+        final Monad<T> monad = new Monad<>();
         monad.value = value;
 
         return monad;
@@ -44,7 +47,7 @@ public class Monad<T> extends Functor<T> {
     @Override
     public <U> Monad<U> map(Function<T, U> fn) {
 
-        return Monad.of(fn.apply(value));
+        return of(flatMap(fn));
 
     }
 
@@ -54,6 +57,7 @@ public class Monad<T> extends Functor<T> {
      * @param fn Function which returns the U type given the type T
      * @return Return the applied value
      */
+    @Override
     public <U> U flatMap(Function<T, U> fn) {
 
         return fn.apply(value);
