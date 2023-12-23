@@ -1,4 +1,6 @@
 java/demo/target/
+scala/.metals
+scala/.vscode
 scala/scala3/project
 scala/scala3/target
 scala/scala3/.metals
