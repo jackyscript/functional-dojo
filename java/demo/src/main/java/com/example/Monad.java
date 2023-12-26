@@ -64,4 +64,15 @@ public class Monad<T> implements IsMonad<T>, Inspectable {
 
     }
 
+    /**
+     * Get the monad value.
+     *
+     * @return The monad value.
+     */
+    @Override
+    public T getValue() {
+
+        return flatMap(Function.identity());
+
+    }
 }

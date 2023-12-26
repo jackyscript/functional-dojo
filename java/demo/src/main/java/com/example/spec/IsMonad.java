@@ -10,4 +10,6 @@ public interface IsMonad<T> extends IsFunctor<T> {
 
     <U> U flatMap(Function<T, U> fn);
 
+    T getValue();
+
 }
