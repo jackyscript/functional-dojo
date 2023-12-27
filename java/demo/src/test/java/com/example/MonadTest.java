@@ -8,7 +8,6 @@ import com.example.spec.IsMonad;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.function.Function;
 import java.util.stream.Stream;
 
 /**
