@@ -26,7 +26,7 @@ class AppTest {
     private static Stream<Arguments> provideMonadValues() {
         return Stream.of(
                 Arguments.of(6, 5, (Function<Integer, Integer>) (number -> number + 1)),
-                Arguments.of(4, "Four", (Function<String, Integer>) (word -> word.length())),
+                Arguments.of(4, "Four", (Function<String, Integer>) (String::length)),
                 Arguments.of("Turtles", "Turtle", (Function<String, String>) (name -> name + "s")));
     }
 
