@@ -14,7 +14,7 @@
 const Functor = {
   of: value => ({
     value: value,
-    inspect: () => console.log(`Functor(${value})`),
+    inspect: () => console.log(`Value: ${value}`),
     map: fn => Functor.of(fn(value))
   })
 };
@@ -22,9 +22,7 @@ const Functor = {
 // To turn our functor into a monad we just add the flatMap function.
 const Monad = {
   of: value => ({
-    value: value,
-    inspect: () => console.log(`Monad(${value})`),
-    map: fn => Monad.of(fn(value)),
+    __proto__: Functor.of(value),
     flatMap: fn => fn(value)
   })
 };
