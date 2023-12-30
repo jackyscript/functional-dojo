@@ -2,7 +2,7 @@ import { Functor } from "./modules/functor.js";
 import { Monad } from "./modules/monad.js";
 /*
   All @Credits to Martin Novak @ https://github.com/MeetMartin.
-  This whole project started with the very recommandable short of 7urtle Javascript:
+  This whole project started with the very recommendable short of 7urtle Javascript:
   https://www.youtube.com/watch?v=LITiJmyiOt0
   JavaScript functional programming.
   Monad under 60 seconds
