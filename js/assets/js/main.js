@@ -1,3 +1,5 @@
+import { Functor } from "./modules/functor.js";
+import { Monad } from "./modules/monad.js";
 /*
   All @Credits to Martin Novak @ https://github.com/MeetMartin.
   This whole project started with the very recommandable short of 7urtle Javascript:
@@ -5,28 +7,6 @@
   JavaScript functional programming.
   Monad under 60 seconds
 */
-
-/*
-  This is a minimal implementation of a functor
-  It simply has a "of"-function that accepts a value
-  and returns an object that has "map".
-*/
-const Functor = {
-  of: value => ({
-    value: value,
-    inspect: () => console.log(`Value: ${value}`),
-    map: fn => Functor.of(fn(value))
-  })
-};
-
-// To turn our functor into a monad we just add the flatMap function.
-const Monad = {
-  of: value => ({
-    __proto__: Functor.of(value),
-    flatMap: fn => fn(value)
-  })
-};
-
 
 /*
   Every monad is a functor. A functor is just a wrapper about some value:
