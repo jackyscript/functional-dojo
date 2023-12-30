@@ -3,6 +3,8 @@ import { Functor } from "./functor.js";
 const Monad = {
   of: value => ({
     __proto__: Functor.of(value),
+    type: "Monad",
+    map: fn => Monad.of(fn(value)),
     flatMap: fn => fn(value)
   })
 };
