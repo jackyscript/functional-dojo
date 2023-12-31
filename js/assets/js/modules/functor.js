@@ -4,13 +4,14 @@
   and returns an object that has "map".
 */
 const Functor = {
-  of: value => ({
-    type: "Functor",
-    value: value,
-    toString() { return `${this.type}(${value})` },
-    inspect() { console.log(this.toString()) },
-    map: fn => Functor.of(fn(value))
-  })
+  of: function createFunctor(value, type = "Functor") {
+    return {
+      value: value,
+      toString: () => `${type}(${value})`,
+      inspect: function () { console.log(this.toString()) },
+      map: fn => Functor.of(fn(value, type))
+    };
+  }
 };
 
 export { Functor };
