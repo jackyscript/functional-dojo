@@ -8,7 +8,7 @@ const Functor = {
     return {
       value: value,
       toString: () => `${type}(${value})`,
-      inspect: function () { console.log(this.toString()) },
+      inspect: function logInConsole() { console.log(this.toString()) },
       map: fn => Functor.of(fn(value, type))
     };
   }
