@@ -7,6 +7,7 @@ functional-dojo is a place for experimenting using functional programming. It cu
 * Javascript 😎
 * Java 🤓
 * Scala 🧐
+* Python 😍
 
 The intent is to share tips, hints and tidbits about functional programming in a simple executable manner.
 
